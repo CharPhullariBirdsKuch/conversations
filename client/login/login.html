@@ -1,0 +1,125 @@
+
+<template name="login" >
+
+<div class="row row_nomargin_padd" style="background-color: #070642; ">
+  {{> toplog}}
+  {{> log}}
+  
+</div>
+
+</template>
+
+<template name="toplog ">
+
+
+              <div class="section black_bg" style="padding:10px 10px; padding-bottom: 0px;">
+                <form class="row" role="search">
+
+                    <div class="col m12 l5 s12 form-group ">
+                     <p> <img src="http://beetavayuz.bitovn.com/feed/blog/logo.png" class="login_logo"></p>
+                    </div>
+                    <div class="col m12 l3 s12 form-group">
+                        <input type="email" class="form-control formal_signin login_input_box" name="email" id="login_email" placeholder="Email">
+                    </div>
+                    <div class="col m12 l3 s12 form-group">
+                        <input type="password" class="form-control formal_signin login_input_box" name="password" id="login_password"
+                         placeholder="Password">
+                          <a href="/forgot_password" class="forgot_password login_forgot_pass" id="forgotpass">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="col  m12 l1 s12 form-grou btn btn-default login_head height_sub login-btn"  id="login_submit" >Sign In</button>
+                   
+                </form>
+              </div>
+</template>
+<template name="log" >
+{{#if users}}
+
+<h1>{{username}}</h1>
+
+{{/if}}
+  <div class="col s12 m12 l5">
+<h2 class="center color_head_signup_left visible-lg"> Welcome to BITOVN 
+A place to connect, collaborate and create..</h2>
+  </div>
+<div class="col s12 m12 l7">
+        <div class="sign_up_form">
+        
+        <p class="login_join_now" style="margin-top: 0px;"> Join now</p>
+                
+        <form class="form with-margin" name="login-form" id="login-form">
+       
+        <div class="form-group"> 
+          <input type="text" class="form-control login_input_box" name="username" id="username" required   placeholder="Full Name">
+          <span id="usernameerr" style="color:red"></span>
+        </div>
+        
+        <div class="form-group">
+              <input type="email" class="form-control login_input_box"  name="email" id="email" required placeholder="Email">
+        </div>
+        
+        <div class="form-group">
+        
+          <input type="password" class="form-control login_input_box" name="password" id="password1"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password">
+                  <small style="font-size:11px;" id="passerror"></small>
+        </div>
+
+        <div class="form-group">
+        <div class="g-recaptcha" data-sitekey="6LeOWSgUAAAAALEBSN0xby2mBdfYQ3p6KpZcBjNJ"></div>
+        <span id="recaptchaerr" style="color:red"></span>
+        </div>    
+          
+        <p class="login_forgot_pass">
+          By clicking <strong>Join Now</strong>,<!-- you agree to the <strong>Special Neighborhood-->
+          <a href="javascript:void(0)" class="terms_services"> User Agreement</a>,
+          <a href="javascript:void(0)" class="terms_services">Privacy Policy</a> and 
+         <a href="javascript:void(0)" class="terms_services">Cookie Policy </a> 
+        </p>   
+        <div style="height:10px;"></div>
+        <div class="form-group text-center">
+          <label class="control-label" for=""></label>
+         
+                  <div class="col-md-3"> &nbsp; </div>
+
+           <div class="col-md-6"><input type="submit" class="btn col-md-12 btn-home format_join join_btn_signup height_sub login-btn" id="signup" value="Join"> <br/>  <br/>   
+           <p class="center login_forgot_pass">Or sign in by</p>  <br/> </div>
+                   <div class="col-md-3"> &nbsp; </div>
+                  
+
+        </div>
+
+            </form>     
+
+           
+                <div class="omb_login">
+    
+    <div class="row kpx_socialButtons">
+          <div class="col s12 m4 l4 pad_btm_btn_social">
+            <a href="#" class="btn btn-lg fb_bt btn-block kpx_btn-facebook fb height_sub login-btn" data-toggle="tooltip" data-placement="top" title="Facebook" id="login_with_facebook" >
+              <i class="fa fa-facebook login_social_icon"></i>
+              <span class="hidden-xs"></span>
+            </a>
+          </div>
+       
+          <input type="hidden" id="login_with_fb2">
+          <div class="col s12 m4 l4 pad_btm_btn_social">
+            <a href="#" class="btn g_bt btn-lg btn-block kpx_btn-google-plus gp height_sub login-btn" data-toggle="tooltip" data-placement="top" title="Google Plus" id="login_with_googleplus" >
+              <i class="fa fa-google-plus login_social_icon"></i>
+              <span class="hidden-xs"></span>
+            </a>
+          </div>  
+
+  <div class="col s12 m4 l4 pad_btm_btn_social">
+            <a href="#" class="btn g_bt btn-lg btn-block kpx_btn-linked-in gp linkin_btn height_sub login-btn" data-toggle="tooltip" data-placement="top" title="Linkedin" id="login_with_linkdin" >
+ <i class="fa fa-linkedin login_social_icon"></i>
+               <span class="hidden-xs"></span>
+            </a>
+          </div> 
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+ </template>
+
